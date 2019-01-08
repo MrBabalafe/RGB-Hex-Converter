@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2e2e2">
+
+    <EditText
+        android:id="@+id/redNumField"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="Red"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/greenNumField"
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="Green"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/redNumField"
+        app:layout_constraintStart_toEndOf="@+id/redNumField"
+        app:layout_constraintTop_toTopOf="@+id/redNumField"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/blueNumField"
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="Blue"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/greenNumField"
+        app:layout_constraintStart_toEndOf="@+id/greenNumField"
+        app:layout_constraintTop_toTopOf="@+id/greenNumField"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/RGBToHex_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="12dp"
+        android:text="Convert"
+        app:layout_constraintBottom_toBottomOf="@+id/blueNumField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/blueNumField"
+        app:layout_constraintTop_toTopOf="@+id/blueNumField"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/RGBToHexFinalColor_btn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/finalHexCodeTextView"
+        app:layout_constraintStart_toStartOf="@+id/finalHexCodeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/finalHexCodeTextView" />
+
+    <TextView
+        android:id="@+id/finalHexCodeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="244dp"
+        android:text="#FF0AF4"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
